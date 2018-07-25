@@ -1,6 +1,6 @@
 # Xitsonga Web
 
-The backend runns on an AWS Linux Instance:
+The backend runs on an AWS Linux Instance:
 
 MyPHPAdmin Credentials are:
 
