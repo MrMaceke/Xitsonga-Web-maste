@@ -13,4 +13,4 @@ Linux Box Credentials are:
 
 SSH Command: ssh -i "Kutoa.pem" ec2-user@ec2-18-219-68-222.us-east-2.compute.amazonaws.com
 Username: ec2-user
-KeyFile is called Kutoa.pem on Repo
+KeyFile is called Kutoa.pem on Keys folder
