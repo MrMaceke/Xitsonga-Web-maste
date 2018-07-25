@@ -1,0 +1,10 @@
+english:english translation
+Black:Ntima
+White:Basa
+Blue:Wasi
+Green:Rihlaza
+Gold:Nsuku
+Orange:Lamula
+Red:Tshwuka
+Brown:Ribungwa
+Pink:Pinki

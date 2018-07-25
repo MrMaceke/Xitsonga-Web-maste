@@ -1,0 +1,169 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, .9);
+    z-index: 10000;
+}
+.button {
+    margin: 40px;
+    font-size: 72px;
+    font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #fff;
+    font-weight: 400;
+    color: #666;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 20px 70px 30px;
+    position: relative;
+    top: 50px;
+    left: 30%;
+    background: #eeffff;
+    box-shadow: 1px 1px 1px #ffffff;
+    -moz-box-shadow: 1px 1px 1px #ffffff;
+    -webkit-box-shadow: 1px 1px 1px #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.button:hover {
+    color: #333;
+    background: #eeffff;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.modalbg {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: block;
+    pointer-events: none;
+}
+.modalbg .dialog {
+    min-height: 200px;
+    width: 60%;
+    position: relative;
+    top: -1000px;
+    margin: 10% auto;
+    border: 1px solid #009ACD;
+    padding: 5px 20px 13px 20px;
+    box-shadow: 2px 2px 2px 2px #ADD8E6;
+    background: #ffffff;
+}
+.dialog_table {
+    width: 100%;
+}
+.modalbg_2 .dialog {
+    min-height: 200px;
+    width: 60%;
+}
+.scroll_div_cover {
+    max-height: 180px;
+    overflow-y: scroll;
+}
+
+.modalbg_3 {
+    width:60%;
+    margin: 10% auto;
+}
+
+.modalbg_3 .dialog_header{
+    background: #E3E3E3;
+    padding: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+@media (max-width: 767px) {
+    .modalbg .dialog {
+        margin-top: 15%;
+        width: 80%;
+        min-height: 500px;
+    }
+    .modalbg_3 {
+        width:80%;
+        margin: 10% auto;
+    }
+}
+@media (max-width: 400px) {
+    .modalbg .dialog {
+        width: 80%;
+        margin: 30% auto;
+    }
+     .modalbg_3 {
+        width:90%;
+        margin: 30% auto;
+    }
+}
+.modalbg .dialog .ie7 {
+    filter: progid: DXImageTransform.Microsoft.Shadow(color='#000000', Direction=135, Strength=3);
+}
+.modalbg:target {
+    display: block;
+    height: auto;
+    pointer-events: auto;
+}
+.modalbg:target .dialog {
+    top: -90px;
+}
+.close {
+    background: #00d9ff;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 5px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -transition-delay: 0.2s;
+    background: #00d9ff;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.close .ie7 {
+    filter: progid: DXImageTransform.Microsoft.Shadow(color='#000000', Direction=135, Strength=3);
+}
+.close:hover {
+    background: #00d9ff;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.fineprint {
+    font-style: italic;
+    font-size: 10px;
+    color: #646;
+}
