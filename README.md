@@ -2,7 +2,7 @@
 
 The backend runs on an AWS Linux Instance:
 
-MyPHPAdmin Credentials are:
+phpMyAdmin credentials are:
 
 URL: https://ec2-18-219-68-222.us-east-2.compute.amazonaws.com/phpMyAdmin
 Username: developer
