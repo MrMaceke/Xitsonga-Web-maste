@@ -19,6 +19,7 @@
                         <p class="simplenav">
                             <a href="kaya/">Home</a> &mdash;
                             <a href="about/">About</a> &mdash;
+                            <a href="product/">Products</a> &mdash;
                             <a href="sources/">Sources</a> &mdash;
                             <a href="press/">Press</a> &mdash;
                             <a href="legal/">Legal</a> &mdash;
