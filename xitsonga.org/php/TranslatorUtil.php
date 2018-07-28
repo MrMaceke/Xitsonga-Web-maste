@@ -15,26 +15,19 @@
      * 
      */
     class TranslatorUtil{
-        public function translateEnglishToXitsonga($data) {
+        public function translateEnglishToXitsonga($textString, $data) { 
             $aJsonUtils = new JsonUtils();
             $aEntityDAO = new EntityDAO();
             $aItemTypeDAO = new ItemTypeDAO();
             $aTranslationDAO = new TranslationDAO();
 
-            $text = trim(strtolower(str_replace("_"," ",$data->text)));
-            $text = trim(strtolower(str_replace("?","",$data->text)));
+            $text = trim(strtolower(str_replace("_","",$textString)));
+            $text = trim(strtolower(str_replace("?","",$textString)));
+            $text = trim(strtolower(str_replace(".","",$textString)));
+            $text = trim(strtolower(str_replace("’","'",$textString)));
             
-            if(str_word_count($text) > 10) {
-                $aData[item] = $data->text." (".$data->langauge.")";
-                $aData[translation] = strtolower("we cannot handle more than 10 words");
-                $aData[type] = "Translate";
-                $aData[caller] = $data->version == ""?"web":$data->version;
-
-                $aAuditsAPICallsDAO = new AuditsAPICallsDAO();
-
-                $aAuditsAPICallsDAO->AddAuditAPITrail($aData);
-
-                return $aJsonUtils->successFeedback("<we cannot handle more than 10 words>",OPERATION_SUCCESS);
+            if(str_word_count($text) > 30) {
+                return $aJsonUtils->successFeedback("<we cannot handle more than 30 words>",OPERATION_SUCCESS);
             }
             
             $fromLanguage = $data->langauge;
@@ -78,15 +71,7 @@
                 $aSearch = TranslatorUtil::firstWord($translation);
    
                 $aTranslationDAO->AddTranslation($data->text, strtolower($aSearch), $data->langauge, "Direct Translation", 5);
-                $aData[item] = $data->text." (".$data->langauge.")";
-                $aData[translation] = strtolower($aSearch);
-                $aData[type] = "Translate";
-                $aData[caller] = $data->version == ""?"web":$data->version;
-
-                $aAuditsAPICallsDAO = new AuditsAPICallsDAO();
-
-                $aAuditsAPICallsDAO->AddAuditAPITrail($aData);
-
+                
                 return $aJsonUtils->successFeedback(strtolower($aSearch), OPERATION_SUCCESS);
             } else {
                 $format = $text;
@@ -159,20 +144,14 @@
                 $translation = trim(TranslatorUtil::pushFirstAndLast(strtolower($translation), $known));
                 $translation = trim(TranslatorUtil::swapRight(strtolower($translation), $known));
                 $translation = trim(TranslatorUtil::swapLeft(strtolower($translation), $known));
+                $translation = trim(TranslatorUtil::exchangeLeftAndRight(strtolower($translation), $known));
                 $translation = trim(TranslatorUtil::replaceBelongingToConjuction(strtolower($translation)));
                 $translation = trim(TranslatorUtil::replaceInquireConjuction(strtolower($translation)));
                 $translation = trim(TranslatorUtil::replacVowelsConfigs(strtolower($translation)));
                 
                 if($translation != "-" && $translation != "") {
                     $aTranslationDAO->AddTranslation($data->text, strtolower($translation), $data->langauge, $build, 3);
-                    $aData[item] = $data->text." (".$data->langauge.")";
-                    $aData[translation] = strtolower($translation);
-                    $aData[type] = "Translate";
-                    $aData[caller] = $data->version == ""?"web":$data->version;
-
-                    $aAuditsAPICallsDAO = new AuditsAPICallsDAO();
-
-                    $aAuditsAPICallsDAO->AddAuditAPITrail($aData);
+                  
                     
                     return $aJsonUtils->successFeedback(strtolower($translation), OPERATION_SUCCESS);
                 }
@@ -236,10 +215,42 @@
                 $index = strpos($string, $pattern);
                 if($record[swap_right] == 1) {
                     $cutString = trim(str_replace(trim($pattern), "", $string));
-                    $nextSubstring = substr($cutString, $index + 1);
+                    $nextSubstring = trim(substr($cutString, $index + 1));
                     $swapSword = explode(" ", $nextSubstring)[0];
                     
                     $string =  str_replace($swapSword, trim(trim($swapSword). " ".trim($pattern)), $cutString);
+                }
+            }
+            return str_replace("  ", " ", strtolower(trim($string)));
+        }
+        
+        public static function exchangeLeftAndRight($string, $hash) {
+            foreach ($hash as $key => $value) {
+                $record = $value;
+                $pattern = strtolower($record[pattern]);
+                
+                $index = strpos($string, $pattern);
+                if($pattern == "<*>") {
+                    $cutString = trim(str_replace(trim($pattern), "", $string));
+                    $nextSubstring = trim(substr($cutString, $index + 1));
+                    $prevSubstring = trim(substr($cutString, 0, $index));
+
+                    $swapPrevs = explode(" ", $prevSubstring);
+                    $swapPrev = $swapPrevs[count($swapPrevs) - 1];
+                    if($swapPrev ==""){
+                        $swapPrev = $swapPrevs;
+                    }
+                    
+                    $swapNexts = explode(" ", $nextSubstring);
+                    $swapNext = $swapNexts[0];
+                    if($swapNext ==""){
+                        $swapNext = $swapNexts;
+                    }
+                    
+                    $fromReplace = $swapPrev. " ".$pattern." ".$swapNext;
+                    $toReplace = $swapNext. " ".$swapPrev;
+                    
+                    $string = str_replace($fromReplace, $toReplace, strtolower(trim($string)));
                 }
             }
             return str_replace("  ", " ", strtolower(trim($string)));
@@ -254,17 +265,21 @@
                 
                 if($record[swap_left] == 1) {
                     $cutString = trim(str_replace(trim($pattern), "", $string));
-                    $prevSubstring = substr($cutString, 0, $index);
-                    //echo $prevSubstring;
-                    $swapWords = explode(" ", $prevSubstring)[0];
+                    $prevSubstring = trim(substr($cutString, 0, $index));
+                    
+                    $swapWords = explode(" ", $prevSubstring);
                     
                     if(is_array($swapWords)) {
                         $swapWord = $swapWords[count($swapWords) - 1];
+                        if($swapWord ==""){
+                            $swapWord = $prevSubstring;
+                        }
                     } else {
                         $swapWord = $prevSubstring;
                     }
                     
                     $string =  str_replace($swapWord, $pattern. " ".$swapWord, $cutString);
+                   
                 }
             }
             
@@ -327,11 +342,16 @@
                 "mi"=>"ya",
                 "mu"=>"wa",
                 "ku"=>"wa",
+                "nk"=>"wa",
                 "wa"=>"wa",
+                "ti"=>"ra",
                 "xi"=>"xa",
+                "vi"=>"ra",
+                "va"=>"va",
+                "ti"=>"ta",
                 "r"=>"ra",
             );
-            
+                        
             $index = 0;
             foreach ($words as $key => $value) {
                 $word = $value;
@@ -427,23 +447,76 @@
                     return strtolower($translation);
                 } 
             }
-            if($retry < 3 && $language == "english") {
+            if($retry < 5 && $language == "english") {
                 if($retry == 0) {
                     $tempText = rtrim($passed,"ing");
                 } else if($retry == 1) {
                     $tempText = rtrim($passed,"s");
                 } else if($retry == 2) {
-                        $tempText = rtrim($passed,"ed");
+                    $tempText = rtrim($passed,"ed");
+                } else if($retry == 3) {
+                    $tempText = rtrim($passed,"d");
+                } else if($retry == 4) {
+                    $tempText = rtrim($passed,"al");
                 }
                 return $this->liveTranslateInternal($passed, $language,$tempText, ++ $retry);
-            } else if($retry < 1 && $language == "xitsonga") {
+            } else if($retry < 13 && $language == "xitsonga") {
                 if($retry == 0) {
                     $tempText = rtrim($passed,"ile");
                     $tempText = $tempText."a";
-                } 
+                } else if($retry == 1) {
+                    $tempText = "n".$passed;
+                } else if($retry == 2) {
+                    $tempText = ltrim($passed,"swi");
+                    $tempText = "xi".$tempText;
+                } else if($retry == 3) {
+                    $tempText = str_replace("nyana", " ", $passed);
+                } else if($retry == 4) {
+                    $tempText = str_replace("n", "", $passed);
+                } else if($retry == 5) {
+                    $tempText = rtrim($passed,"ka");
+                    $tempText = $tempText."a";
+                } else if($retry == 6) {
+                    if (preg_match('/^'."mi".' /', $passed) === 1) {
+                        $tempText = substr($passed ,(strlen("mi")));
+                    } else {
+                        $tempText = $passed;
+                    }
+                } else if($retry == 7) {
+                    if (preg_match('/^'."ma".' /', $passed) === 1) {
+                        $tempText = substr($passed ,(strlen("ma")));
+                    } else {
+                        $tempText = $passed;
+                    }
+                } else if($retry == 8) {
+                    if (preg_match('/^'."swi".' /', $passed) === 1) {
+                        $tempText = substr($passed ,(strlen("swi")));
+                    } else {
+                        $tempText = $passed;
+                    }
+                } else if($retry == 9) {
+                    $tempText = rtrim($passed,"iwe");
+                    $tempText = $tempText."a";
+                }  else if($retry == 10) {
+                    $tempText = rtrim($passed,"ela");
+                    $tempText = $tempText."a";
+                } else if($retry == 11) {
+                    if (preg_match('/^'."e".'/', $passed) === 1) {
+                        $tempText = substr($passed ,(strlen("e")));
+                    } else {
+                        $tempText = $passed;
+                    }
+                } else if($retry == 12) {
+                    if (preg_match('/^'."e".'/', $passed) === 1) {
+                        $tempText = substr($passed ,(strlen("e")));
+                        $tempText = rtrim($tempText,"ni");
+                    } else {
+                        $tempText = $passed;
+                    }
+                }
                 return $this->liveTranslateInternal($passed, $language,$tempText, ++ $retry);
             }
             
-            return "<$passed>";
+            return "$passed";
         }
     }

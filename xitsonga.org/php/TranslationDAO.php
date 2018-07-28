@@ -32,7 +32,7 @@
                         
             $this->aEntityManager->getSql()->beginTransaction();
             
-            $aResult = $this->aEntityManager->addData($aTranslationEntity->ToArray());
+            $aResult = $this->aEntityManager->addDataV2($aTranslationEntity->ToArray());
             
             if($aResult['status']){
                 $this->aEntityManager->getSql()->commitTransaction();

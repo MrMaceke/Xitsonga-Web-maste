@@ -114,17 +114,17 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <textarea id = "englishTranslate" class="form-control" rows="1" placeholder="Word or phrase" style="padding-top: 20px;padding-bottom: 20px;font-size: 15px;font-weight: 100;color:#00688B;"></textarea>
+                        <textarea id = "englishTranslate" class="form-control" rows="4" placeholder="Word or phrase" style="padding-top: 2px;padding-bottom: 2px;font-size: 15px;font-weight: 100;color:#00688B;"></textarea>
                     </div>
                     <div class="col-sm-6">
-                        <textarea id = "xitsongaTranslate" class="form-control" rows="1" placeholder="Translation" style="padding-top: 20px;padding-bottom: 20px;font-size: 15px;font-weight: 100;color:#CD0000"></textarea>
+                        <textarea id = "xitsongaTranslate" class="form-control" rows="4" placeholder="Translation" style="padding-top: 2px;padding-bottom: 2px;font-size: 15px;font-weight: 100;color:#CD0000"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <button class='btn btn-action alternativeButton' id = "startEnglishTranslate">English to Xitsonga</button>
+                        <button class='btn btn-action alternativeButton' id = "startEnglishTranslate" style="margin-bottom: 5px">English to Xitsonga</button>
    
-                        <button class='btn btn-action alternativeButton' id = "startXitsongaTranslate">Xitsonga to English</button>
+                        <button class='btn btn-action alternativeButton' id = "startXitsongaTranslate" style="margin-bottom: 5px">Xitsonga to English</button>
                     </div>
                 </div>
                 
@@ -267,7 +267,7 @@
                 </div>
                 <br/>
                 <div>
-                    <a>info@xitsonga.org</a>
+                    <a>sneidon.dumela@gmail.com</a> / 0710112950
                 </div>
                 <br/><br/>
             </article>

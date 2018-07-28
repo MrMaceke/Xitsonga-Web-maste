@@ -2242,8 +2242,70 @@
          */
         public function liveTranslate($data) {
             $aTranslatorUtil = new TranslatorUtil();
+            
+            $value = trim($data->text);
+            if($value == "") {
+                return $this->formatSuccessFeebackToJSON("<type a word or phrase>");
+            }
             //if($this->getCurrentUser()->getEmail() == "sneidon@yahoo.com"){
-                return $aTranslatorUtil->translateEnglishToXitsonga($data);
+            $text = $data->text;
+            $text = trim(strtolower(str_replace(",",".",$text)));
+            $text = trim(strtolower(str_replace("?",".",$text)));
+            $text = trim(strtolower(str_replace(":",".",$text)));
+            $text = trim(strtolower(str_replace(";",".",$text)));
+            $text = trim(strtolower(str_replace("!",".",$text)));
+            $sentences = explode(".", $text);
+            $return = "";
+            if(is_array($sentences)) {
+                foreach ($sentences as $key => $value) {
+                    $value = trim($value);
+                    if($value != "") {
+                        $json = json_decode($aTranslatorUtil->translateEnglishToXitsonga(trim($value),$data));
+                    
+                        $chars = array(",",".",";");
+                        $start = strpos($value, $data->text) + strlen($value);
+                        $char = " ";
+                        for($index = 0; $index < $start; $index ++) {
+                            $string = $data->text;
+                            if(in_array($string[$index], $chars)) {
+                                $char = $string[$index]. " ";
+                                break;
+                            }
+                        }
+                        $return = $return.$char.$json->infoMessage;
+                    }
+                }
+                
+                $aData[item] = $data->text." (".$data->langauge.")";
+                $aData[translation] = strtolower($return);
+                $aData[type] = "Translate";
+                $aData[caller] = $data->version == ""?"web":$data->version;
+
+                $aAuditsAPICallsDAO = new AuditsAPICallsDAO();
+
+                $aAuditsAPICallsDAO->AddAuditAPITrail($aData);
+                
+                return $this->formatSuccessFeebackToJSON($return);
+            } else {
+                $value = trim($data->text);
+                if($value == "") {
+                    return $this->formatSuccessFeebackToJSON("Type a word or phrase");
+                }
+                $value = $aTranslatorUtil->translateEnglishToXitsonga(trim($data->text),$data);
+                $json = json_decode($value);
+                
+                $return = $json->infoMessage;
+                
+                $aData[item] = $data->text." (".$data->langauge.")";
+                $aData[translation] = strtolower($return);
+                $aData[type] = "Translate";
+                $aData[caller] = $data->version == ""?"web":$data->version;
+
+                $aAuditsAPICallsDAO = new AuditsAPICallsDAO();
+
+                $aAuditsAPICallsDAO->AddAuditAPITrail($aData);
+                return $value;
+            }
             //}
             //return $this->formatErrorFeebackToJSON("Feature is currently being updated. Please try again in 1 hour (22 July 2018, 9pm)");
         }
