@@ -2044,20 +2044,17 @@
             return "Activation code does not exist";
         }
         
-        public function ResetNewPassword($aActivationCode) {
+        public function ValidateResetNewPassword($aActivationCode) {
             $aActivationDAO = new ActivationDAO();
             $aUserDAO = new UserDAO();
             
             $aResult =  $aActivationDAO->getActivationByHash($aActivationCode);
             if($aResult['status']){
-                $aTemp = $aUserDAO->updateActivationStatus($aResult[resultsArray][user_id],"1");
-                if($aTemp['status']){
+                
                     return HTMLDisplay::GetActivatedUserHTML($aResult[resultsArray]);
                 }else{
-                    return "An unknown error occured during Resetting";
+                    return "An unknown error occured during Validating";
                 }
-            }
-            return "Activation code does not exist";
         }
         
         /**
