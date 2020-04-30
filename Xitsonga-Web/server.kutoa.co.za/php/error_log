@@ -1,0 +1,22 @@
+[22-May-2017 11:46:30 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 11:46:30 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 11:46:30 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 14:15:34 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 22:56:52 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 22:56:52 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 22:56:52 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 22:56:53 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 22:56:55 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 22:56:59 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[22-May-2017 22:57:09 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[24-May-2017 09:04:41 Africa/Johannesburg] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/kutoakdg/public_html/server/php/persistence/Sql.php on line 23
+[10-Mar-2018 20:59:00 Africa/Johannesburg] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\RestException' with message '[HTTP 401] Unable to create record: Authenticate' in /home/kutoakdg/public_html/server/php/Twilio/Version.php:85
+Stack trace:
+#0 /home/kutoakdg/public_html/server/php/Twilio/Version.php(207): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to creat...')
+#1 /home/kutoakdg/public_html/server/php/Twilio/Rest/Api/V2010/Account/MessageList.php(65): Twilio\Version->create('POST', '/Accounts/AC826...', Array, Array)
+#2 /home/kutoakdg/public_html/server/php/utils/SMSUtils.php(46): Twilio\Rest\Api\V2010\Account\MessageList->create('+27767281528', Array)
+#3 /home/kutoakdg/public_html/server/php/KutoaBean.php(1084): SMSUtils::sendSMS('0767281528', 'Kutoa digit cod...')
+#4 /home/kutoakdg/public_html/server/php/KutoaBean.php(78): KutoaBean->resendOneTimePIN(Object(stdClass))
+#5 /home/kutoakdg/public_html/server/php/KutoaBean.php(32): KutoaBean->functionName('resendOneTimePI...', '{"phoneNumber":...')
+#6 {main}
+  thrown in /home/kutoakdg/public_html/server/php/Twilio/Version.php on line 85

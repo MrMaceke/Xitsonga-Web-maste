@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule business corporate.php [NC,L]
+RewriteRule education language.php [NC,L]
+RewriteRule nest nest.php [NC,L]
+
+RewriteRule about-company about.php [NC,L]
+RewriteRule careers careers.php [NC,L]
+
+RewriteRule cookie-policy cookie.php [NC,L]
+RewriteRule data-policy data-policy.php [NC,L]
+RewriteRule team team.php [NC,L]

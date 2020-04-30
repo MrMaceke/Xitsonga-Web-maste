@@ -1,0 +1,8 @@
+Options -Indexes 
+RewriteEngine On
+
+RewriteRule home index.php [NC,L]
+RewriteRule contact contact.php [NC,L]
+RewriteRule safety safety.php [NC,L]
+RewriteRule terms terms.php [NC,L]
+RewriteRule privacy privacy.php [NC,L]

@@ -1,0 +1,52 @@
+Options All -Indexes
+Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^users/([^/\.]+)/?$ users.php?sk=$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^client/([^/\.]+)/?$ client.php?sk=$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^project/([^/\.]+)/?$ project.php?sk=$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ticket/([^/\.]+)/?$ ticket.php?sk=$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^invoice/([^/\.]+)/?$ invoice.php?sk=$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^offline/([^/\.]+)/?$ offline_p.php?sk=$1
+
+RewriteRule dashboard dashboard.php [NC,L]
+
+RewriteRule clients clients.php [NC,L]
+RewriteRule projects projects.php [NC,L]
+RewriteRule tickets tickets.php [NC,L]
+RewriteRule invoices invoices.php [NC,L]
+RewriteRule tasks tasks.php [NC,L]
+RewriteRule options options.php [NC,L]
+RewriteRule deals deals.php [NC,L]
+RewriteRule quotes quotes.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule client client.php [NC,L]
+RewriteRule ticket ticket.php [NC,L]
+RewriteRule invoice invoice.php [NC,L]
+RewriteRule project project.php [NC,L]
+RewriteRule offline offline_p.php [NC,L]
+
+RewriteRule timeline timeline.php [NC,L]
+
+RewriteRule users users.php [NC,L]
+RewriteRule groups groups.php [NC,L]
+RewriteRule properties properties.php [NC,L]
+
+RewriteRule support help.php [NC,L]
+
+RewriteRule resources resources.php [NC,L]
+RewriteRule login index.php [NC,L]
+RewriteRule account account.php [NC,L]
+RewriteRule logout signout.php [NC,L]
+
+RewriteRule error403 error403.php [NC,L]
+
+ErrorDocument 404 /error404.php
