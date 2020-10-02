@@ -22113,7 +22113,6 @@ bench
 einst
 haughtily
 lustrous
-mina
 viennent
 Orleans
 Swift
@@ -31211,7 +31210,6 @@ vigor
 Compared
 D.W.
 Host
-Mina
 Pre
 QUEEN
 Vincennes

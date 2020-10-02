@@ -1,0 +1,87 @@
+{
+	"type": "table",
+	"name": "islands",
+	"database": "roundcnz_book_prod1",
+	"data": [{
+			"key": "5",
+			"userKey": "2147483647",
+			"name": "Nursery Nest",
+			"descprition": "Books under this group are meant to educate, develop and mold the young minds of children. Books under this group are aimed at children aged 4 â€“ 7 years. Mainly meant for parents to read out to children and for joint reading.\n",
+			"dateCreated": "2017-10-17 09:01:29",
+			"dateModified": "2017-10-17 09:01:29",
+			"recordStatus": "1"
+		},
+		{
+			"key": "4",
+			"userKey": "9411567",
+			"name": "World of Magic",
+			"descprition": "World of Magic",
+			"dateCreated": "2017-10-16 19:24:44",
+			"dateModified": "2017-10-17 09:04:52",
+			"recordStatus": "0"
+		},
+		{
+			"key": "6",
+			"userKey": "2147483647",
+			"name": "Poetry Land",
+			"descprition": "This group is intended to contain a series of poetry books. The complexity of the poetry can range from fairly simple to high level depending on the targeted age group.",
+			"dateCreated": "2017-10-17 09:02:09",
+			"dateModified": "2017-10-17 09:02:09",
+			"recordStatus": "1"
+		},
+		{
+			"key": "7",
+			"userKey": "2147483647",
+			"name": "Fireplace Adventure",
+			"descprition": "Books written under this group are fictitious, fast-paced and involve a certain amount of risk, danger and exploration by characters. The books must be adventurous.",
+			"dateCreated": "2017-10-17 09:02:39",
+			"dateModified": "2017-10-17 09:02:39",
+			"recordStatus": "1"
+		},
+		{
+			"key": "8",
+			"userKey": "2147483647",
+			"name": "Gogo Tales",
+			"descprition": "Books written under this group can be fictitious and are meant to explore simple and contemporary tales which can be quirky and funny. They can also be factual in that they can explore biographies of famous public figures both historical and present.",
+			"dateCreated": "2017-10-17 09:03:15",
+			"dateModified": "2017-10-17 09:58:20",
+			"recordStatus": "1"
+		},
+		{
+			"key": "9",
+			"userKey": "2147483647",
+			"name": "Bedtime Pacifiers",
+			"descprition": "These books are meant to create a calm and comforting atmosphere for a restful night for the children.  These stories tend to be short with a happy ending.",
+			"dateCreated": "2017-10-17 09:06:53",
+			"dateModified": "2017-10-17 09:59:47",
+			"recordStatus": "1"
+		},
+		{
+			"key": "10",
+			"userKey": "2147483647",
+			"name": "Sing Along Land",
+			"descprition": "Books under this group will be written as songs that which kids can sing along to. These songs can either have a storyline or teach a particular concept to the child where the complexity of the lyrics will vary according to age targeted.",
+			"dateCreated": "2017-10-17 09:08:35",
+			"dateModified": "2017-10-17 09:08:35",
+			"recordStatus": "1"
+		},
+		{
+			"key": "11",
+			"userKey": "2147483647",
+			"name": "Folktales and Fables",
+			"descprition": "These books are telling tales and fables of Africa and legends; and other international folklore. They have to embrace the African culture and locally, they have to embrace the diverse South African cultures.",
+			"dateCreated": "2017-10-17 09:55:24",
+			"dateModified": "2017-10-17 09:58:49",
+			"recordStatus": "1"
+		},
+		{
+			"key": "12",
+			"userKey": "2147483647",
+			"name": "World of Magic",
+			"descprition": "In this group we explore the world of fairytales (fairytale romance and adventure), make-believe stories and fantasy characters.",
+			"dateCreated": "2017-10-17 09:56:31",
+			"dateModified": "2020-04-29 00:44:39",
+			"recordStatus": "1"
+		}
+	]
+}

@@ -10,7 +10,7 @@
 </div>
 <div>
     <a target = "_tab" href ="https://apps.apple.com/app/id1361367210">
-        <img src ="assets/images/AppIcon.png" width="150px" style ='border:1px solid gray'/>
+        <img src ="assets/images/logo-square.png" width="150px" style ='border:1px solid gray'/>
     </a>
 </div>
 <div class="rating_div" style ="margin-bottom: -15px">   
@@ -22,23 +22,21 @@
     The app was initially launched in March 2018.
 </p>
 <p>
-    Xitsonga dictionary is a free offline dictionary with thousands of words translated from Xitsonga to English and English to Xitsonga. The dictionary information is provided by Xitsonga.org, hundreds of registered users contribute to the Xitsonga.org website content.
+    Xitsonga dictionary provides you with thousands of words translated from Xitsonga to English and much more. Our app is designed to help you learn in fun intuitive way and we have gone above and beyond to provide you with accurate content.
 </p>
 <p>
     <b>Appstore link</b>: <a target = "_tab" href ="https://apps.apple.com/app/id1361367210">Apple Appstore</a>
 </p>
 <div class="rating_div" style ="margin-bottom: -15px">   
     <div class ='desc_heading'>
-        <h4 id ="founding">Features</h4>
+        <h4 id ="founding">How it works</h4>
     </div>
 </div>
 <p>
-    - Thousands of words translated from Xitsonga to English. <br/>
-    - Thousands of words translated from English to Xitsonga. <br/>
-    - Tens of Xitsonga proverbs with English translation. <br/>
-    - Provides an easy way to search. <br/>
-    - Audible pronunciations of words in English. <br/>
-    - Allows you to save your favourite words. <br/>
+    - If you need a translation for a word or phrase use our instant translator. <br/>
+    - If you see something and you need to know what it is called in Xitsonga simply take a picture using our Xitsonga vision feature. <br/>
+    - If you need words organised in groups like animals, fruits, people's names etc we have tens of categories. <br/>
+    - Of course if you feeling smart you can check our Xitsonga proverbs and idioms section to learn the wisdom of Vatsonga people. <br/>
 </p>
 <div class="rating_div" style ="margin-bottom: -15px">   
     <div class ='desc_heading'>
@@ -46,9 +44,9 @@
     </div>
 </div>
 <div>
-    <img src="assets/images/ios1.jpg" width="200px"/>
-    <img src="assets/images/ios2.jpg" width="200px"/>
-    <img src="assets/images/ios3.jpg" width="200px"/>
+    <img src="assets/images/ios1.png" width="200px"/>
+    <img src="assets/images/ios2.png" width="200px"/>
+    <img src="assets/images/ios3.png" width="200px"/>
 </div>
 <div class="rating_div" style ="margin-bottom: -15px">   
     <div class ='desc_heading'>

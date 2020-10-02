@@ -89,7 +89,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                     </div>
                     <div class ="newBody">
                         <p>
-                            Xitsonga Vision is a free service which instantly translates pictures to Xitsonga.
+                            Xitsonga Vision is a free service which instantly identifies pictures in Xitsonga.
                         </p>
                     </div>
                     <div class="row">
@@ -103,6 +103,9 @@ if (!$aWebbackend->hasAccess($pageName)) {
                     </div>
                     <br/>
                     <div class="row">
+                        <div class="col-sm-12" style="margin-bottom: 5px">
+                            <a  href="translator"><img src="assets/images/icons8-chat_room.png" width="20px" id = "translatedImage"/></a>&nbsp;&nbsp;<a href="translator" class='btn' id = "translatedImage" style="margin-bottom: 5px;background: #E9EAED;color: #6E6E6E; border:1px solid #B0B0B0;"><span>Translate text</span></a> <!--<sup style="color:red;font-weight: bold;">* New</sup>-->
+                        </div>
                         <div class="col-lg-6">
                             <form id="my-form" method="POST" action="webBackend.php?method=processVision&caller=web" enctype="multipart/form-data">
                                 <div id="file-wrap">
@@ -160,7 +163,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=454713284683866";
                             fjs.parentNode.insertBefore(js, fjs);
                         }(document, 'script', 'facebook-jssdk'));</script>
-                    <div class="fb-like" data-href="https://facebook.com/Xitsonga.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>            
+                    <div class="fb-like" data-href="https://facebook.com/Xitsonga.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>            
                 </aside>
             </div>
         </div>

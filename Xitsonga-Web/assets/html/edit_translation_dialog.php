@@ -38,7 +38,7 @@
                         <option value ="english">English</option>
                         <option value ="english_spelling">English Spelling</option>
                         <option value ="xitsonga">Xitsonga</option>
-                        <option value ="xitsonga_xitsonga">Xitsonga Spelling</option>
+                        <option value ="xitsonga_spelling">Xitsonga Spelling</option>
                     </select>
                 </td>
             </tr>

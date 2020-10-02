@@ -51,11 +51,11 @@
                         <table width ="100%">
                             <tr>
                                 <td>
-                                    <img src ="assets/images/AppIcon.png" width ="100" class="pull-left" style ='border:1px solid gray'/>
+                                    <img src ="assets/images/logo-square.png" width ="100" class="pull-left" style ='border:1px solid gray'/>
                                     
                                     <a href ="service?sk=Xitsonga_Dictionary_Android">Dictionary for Android</a>
                                      <p style ="font-size: 14px">
-                                        A free Android offline dictionary with thousands of Xitsonga words.
+                                        Xitsonga Dictionary for Android provides you with thousands of words translated from Xitsonga to English and much more.
                                     </p>
                                 </td>
                             </tr>
@@ -65,10 +65,10 @@
                         <table width ="100%">
                             <tr>
                                 <td>
-                                    <img src ="assets/images/AppIcon.png" width ="100" class="pull-left" style ='border:1px solid gray'/>
+                                    <img src ="assets/images/logo-square.png" width ="100" class="pull-left" style ='border:1px solid gray'/>
                                     <a href ="service?sk=Xitsonga_Dictionary_iOS">Dictionary for iOS</a>
                                      <p style ="font-size: 14px">
-                                        A free iOS offline dictionary with thousands of Xitsonga words.
+                                       Xitsonga Dictionary for iOS provides you with thousands of words translated from Xitsonga to English and much more.
                                     </p>
                                 </td>
                             </tr>

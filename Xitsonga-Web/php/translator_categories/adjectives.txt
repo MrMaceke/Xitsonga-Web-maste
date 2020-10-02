@@ -14,7 +14,6 @@ high
 happiest
 always
 literally
-tired
 bored
 south
 blessed
@@ -279,7 +278,6 @@ freezing
 greasy
 hot
 icy
-loose
 melted
 prickly
 rough

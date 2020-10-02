@@ -1,3 +1,0 @@
-<button title="Add User" onclick="openAddUserDialog(event)" type="button" class="btn btn-small btn-primary">Add User</button>
-<button title="Update User" onclick="openUpdateUserDialog(event)" type="button" class="btn btn-small btn-primary">Update User</button>
-<button title="Reset Password" onclick="openResetPasswordDialog(event)" type="button" class="btn btn-small btn-primary">Reset Password</button>

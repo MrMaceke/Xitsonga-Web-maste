@@ -68,6 +68,40 @@ require_once "./php/SMSAppBotUtil.php";
 require_once './php/TranslatorService.php';
 
 /* create backend instance for ajax calls */
+
+if (isset($_REQUEST['system']) && ($_REQUEST['system'] == "android" || $_REQUEST['system'] == "iOS")) {
+    $aWebBackend = new WebBackend();
+    $data = trim(file_get_contents('php://input'));
+    $array = json_decode($data);
+    
+    $obsolete = false;
+    if($_REQUEST['system'] == "android") {
+        $version = str_replace("android_v", "", strtolower($array->version));
+        $major = explode(".", $version)[0];
+        
+        if($major <= 4) {
+            $obsolete = true;
+        }
+    } else if(strtolower ($_REQUEST['system']) == "ios") {
+        $version = str_replace("ios_v", "", strtolower($array->version));
+        $version = str_replace("ios_", "", strtolower($version));
+        $major = explode(".", $version)[0];
+        
+        if($major <= 1) {
+            $obsolete = true;
+        }
+        $obsolete = false;
+    }
+
+    if($obsolete && strtolower ($_REQUEST['system']) == "ios") {
+        //echo $aWebBackend->formatSuccessFeebackToJSON("Your app is outdated and discontinued. Please update from App store.");
+        return;
+    } else if($obsolete && strtolower ($_REQUEST['system']) == "android") {
+        //echo $aWebBackend->formatSuccessFeebackToJSON("Your app is outdated and discontinued. Please update from Google Play.");
+        //return;
+    }
+}
+
 if (isset($_REQUEST['system']) && ($_REQUEST['system'] == "android" || $_REQUEST['system'] == "iOS")) {
     $aWebBackend = new WebBackend();
 
@@ -1019,8 +1053,8 @@ class WebBackend {
 
         $searchWord = ($type == "xitsonga" ? $trans : $word);
         $aSearch = str_replace(",", ".", $searchWord);
-        $aSearch = str_replace("‚", ".", $aSearch);
-        $aSearch = str_replace("‚", ".", $aSearch);
+        $aSearch = str_replace("Ã¢ÂÂ", ".", $aSearch);
+        $aSearch = str_replace("Ã¢ÂÂ", ".", $aSearch);
 
         $aActive = FALSE;
         $aEdited = FALSE;
@@ -1028,8 +1062,8 @@ class WebBackend {
         $searchWord = ($type == "xitsonga" ? $trans : $word);
         $aSearch = $searchWord;
         $aSearch = str_replace(",", ".", $aSearch);
-        $aSearch = str_replace("‚", ".", $aSearch);
-        $aSearch = str_replace("‚", ".", $aSearch);
+        $aSearch = str_replace("Ã¢ÂÂ", ".", $aSearch);
+        $aSearch = str_replace("Ã¢ÂÂ", ".", $aSearch);
         $aSearch = explode(".", $aSearch);
         $aSearch = $aSearch[0];
 
@@ -1113,8 +1147,8 @@ class WebBackend {
 
         $searchWord = ($type == "xitsonga" ? $trans : $word);
         $aSearch = str_replace(",", ".", $searchWord);
-        $aSearch = str_replace("‚", ".", $aSearch);
-        $aSearch = str_replace("‚", ".", $aSearch);
+        $aSearch = str_replace("Ã¢ÂÂ", ".", $aSearch);
+        $aSearch = str_replace("Ã¢ÂÂ", ".", $aSearch);
 
         $aEntityDAO = new EntityDAO();
 
@@ -3158,6 +3192,10 @@ class WebBackend {
             $callerMessage = $callerMessage . $visionWord . " .";
         }
         $aMessage = $returnMessage;
+        
+        if (strlen($aMessage) == 0) {
+            return $this->formatSuccessFeebackToJSON("I am not able to understand your image.");
+        }
 
 
         $aAuditsAPICallsDAO = new AuditsAPICallsDAO();
@@ -3181,15 +3219,15 @@ class WebBackend {
         $imageName = md5($date . $rand);
 
         $bannerpath = "aws/" . $imageName . '.' . "jpg";
-
-        file_put_contents($bannerpath, base64_decode($data->image));
+        
+        file_put_contents($bannerpath, base64_decode($data->image)); 
 
         $visionWords = $this->processGoogleVisionAI("https://www.xitsonga.org/" . $bannerpath, $imageName);
         if (count($visionWords) == 0) {
             $visionWords = $this->processAzureVisionAI($url, $imageName);
         }
         
-        SanitizeUtil::deleteFile($bannerpath); 
+        //SanitizeUtil::deleteFile($bannerpath); 
 
         if (count($visionWords) == 0) {
             return $this->formatSuccessFeebackToJSON("https://www.xitsonga.org/" . $bannerpath . "**" . "I am not able to understand your image.");
@@ -3212,6 +3250,9 @@ class WebBackend {
         }
         $aMessage = $returnMessage;
 
+        if (strlen($aMessage) == 0) {
+            return $this->formatSuccessFeebackToJSON("I am not able to understand your image.");
+        }
 
         $aAuditsAPICallsDAO = new AuditsAPICallsDAO();
 

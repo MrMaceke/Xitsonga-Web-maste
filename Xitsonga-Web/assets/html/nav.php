@@ -43,11 +43,10 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span style="color:white">MENU</span></button>
-                <a style ='color:black;font-size:14px' class="navbar-brand logo_text" href="kaya"><img title = "Xitsonga.org" src ="assets/images/Artwork.png" width ='35'/>&nbsp;XITSONGA.ORG</a>&nbsp;&nbsp;&nbsp;
+            <a style ='color:black;font-size:14px' class="navbar-brand logo_text" href="kaya"><img title = "Xitsonga.org" src ="assets/images/Artwork_2.png" width ='35'/>&nbsp;XITSONGA.ORG</a>&nbsp;&nbsp;&nbsp;
         </div>
         <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="covid19"></span>Xitsonga - Covid19 SA</a></li> 
                     <li class="active"><a href="dictionary"></span>Xitsonga Dictionary</a></li> 
                     <li class="active"><a href="proverbs">Proverbs & Idioms</a></li>
                     <li class="active"><a href="grammar">Language & Grammar</a></li>
@@ -55,7 +54,7 @@
                     <li class="active"><a href="translator"></span>Xitsonga Translator</a></li>
                     <!--<li class="active"><a href="chatbot"></span>ChatBot</a></li>-->
                     <!--<li class="active"><a href="learn">Exercises</a></li>-->
-                    <!--<li class="active"><a href="writing">Poems & Stories</a></li>-->
+                    <li class="active"><a href="writing">Poems & Stories</a></li>
                 </ul>
         </div>
     </div>

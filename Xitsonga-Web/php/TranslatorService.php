@@ -11,7 +11,7 @@ class TranslatorService {
     public static $wordOverallLimitMessage = "I am sorry but I cannot handle more than 100 words at once.";
     public static $wordsLimitPerSentenceMessage = "I am sorry but I cannot handle more than a sentence of more than 20 words.";
     public static $emptyValuePassed = "Type a word or phrase.";
-    public static $offlineMessage = "Translator is currently offline. Please try again later.";
+    public static $offlineMessage = "Translator is currently offline for maintenance. Please try again later.";
     
     public static $isLive = TRUE;
     private static $JsonUtil;
@@ -142,10 +142,11 @@ class TranslatorService {
     public static function translateSentence($detectedLanguage, $sentence, $data) {
         $aTranslatorUtil = new TranslatorUtil();
         $aTranslatorXitsongaUtil = new TranslatoXitsongaUtil();
-
+        
         if ($detectedLanguage == "english") {
             $aResponse = json_decode($aTranslatorUtil->translateEnglishToXitsonga($detectedLanguage, trim($sentence), $data, true));
         } else if ($detectedLanguage == "xitsonga") {
+            
             $aResponse = json_decode($aTranslatorXitsongaUtil->translateXitsongaToEnglish($detectedLanguage, trim($sentence), $data, true));
         } else {
             return $sentence;
@@ -171,7 +172,7 @@ class TranslatorService {
         $words = explode(" ", $text);
         $rating = 0;
         
-        $english_words_file = file_get_contents("./php/translator_categories/english_commont_words.txt");
+        $english_words_file = file_get_contents("./php/translator_categories/english_top_10000_common_words.txt");
         $english_words = explode("\n", $english_words_file);
         
         foreach ($words as $key => $value) {
@@ -188,7 +189,6 @@ class TranslatorService {
         if ($rating > 1) {
             return "english";
         }
-        
         return "xitsonga";
     }
 

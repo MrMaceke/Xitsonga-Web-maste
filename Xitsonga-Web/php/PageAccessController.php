@@ -16,7 +16,7 @@ class PageAccessController {
     /**
      * Defines Access Level
      */
-    private $UNLOGGED_ACCESS = -1;
+    private $UNLOGGED_ACCESS = -1; 
     private $BASIC_ACCESS = 0;
     private $USER_ACCESS = 1;
     private $ADMIN_ACCESS = 2;
@@ -26,9 +26,9 @@ class PageAccessController {
     public function PageAccessController($aUser) {
 
         $this->pages = array(
-            "index" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Xitsonga &mdash; a free dictionary with thousands of words"),
-            "translate" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Translate &mdash; a free xitsonga to english dictionary"),
-            "vision" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Vision &mdash; a free xitsonga to english dictionary"),
+            "index" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Xitsonga.org &mdash; Kaya"),
+            "translate" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Translate &mdash; Xitsonga.org"),
+            "vision" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Vision &mdash; Xitsonga.org"),
             "status" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "System status &mdash; Xitsonga.org"),
             "chatbot" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Rivoningo, the ChatBot &mdash; a live Xitsonga ChatBox based on Eliza"),
             "api" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Xitsonga Dictionary API &mdash; a simple REST dictionary API"),
@@ -70,7 +70,7 @@ class PageAccessController {
         );
 
         $this->meta = array(
-            "index" => $this->returnArrayForMeta("A free dictionary with thousands of words translated from Xitsonga to English and English to Xitsonga.", "Xitsonga,xitsonga dictionary, xitsonga to english dictionary, english to xitsonga dictionary"),
+            "index" => $this->returnArrayForMeta("Xitsonga.org is non profit project aimed at teaching people and digitizing the Xitsonga language.", "Xitsonga,xitsonga dictionary, xitsonga to english dictionary, english to xitsonga dictionary"),
             "learn" => $this->returnArrayForMeta("Free xitsonga online exercises", "xitsonga exercises,xitsonga online tests"),
             "contact" => $this->returnArrayForMeta("Share your thoughts with us.", "Xitsonga contact,Sneidon Dumela"),
             "about" => $this->returnArrayForMeta("Sharing information to help people learn Xitsonga.", "Xitsonga dictionary founding,sneidon dumela"),

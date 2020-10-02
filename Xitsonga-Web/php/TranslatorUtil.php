@@ -760,6 +760,7 @@ class TranslatorUtil {
             $record = $value;
             $string = trim($string);
             $item = trim(strtolower($record->item));
+                        
             $replacement = trim(strtolower($record->replacement));
             if (strpos($string, ' ' . $item . ' ') !== false) {
                 $string = str_replace($item, $replacement, $string);
@@ -1137,6 +1138,7 @@ class TranslatorUtil {
             "ti" => "ta",
             "r" => "ra",
             "g" => "ra",
+            "s" => 'ra'
         );
 
         $index = 0;
@@ -1430,7 +1432,7 @@ class TranslatorUtil {
         /**
          * Word is in present tense
          */
-        if (strpos($word, 'a|ing') !== false) {
+        if (strpos($word, 'a|ing') !== false && false) {
             $word = TranslatorUtil::replaceHardCodedPatternForWord(strtolower($word), "a|ing", "eni");
             if ($firstWord) {
                 $word = "$word";
@@ -1449,10 +1451,10 @@ class TranslatorUtil {
             if ($isVerb) {
                 $word = ($word);
             } else {
-                $word = TranslatorUtil::changeWordToPlural($word);
+                $word = $word; 
+                //TranslatorUtil::changeWordToPlural($word);
             }
         }
-
 
         /**
          * Person from verb

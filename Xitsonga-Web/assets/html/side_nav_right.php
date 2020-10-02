@@ -22,7 +22,9 @@
         //echo $aWebBackend->GetAuditAPICallsList();     
     ?>
     <ul class ='dictionary_list2'>
+        <li class =''><a href ='https://www.xitsonga.org/covid19'>COVID-19 #Xitsonga</a></li>
         <li class =''><a href ='translator'>Translator</a></li>
+        <li class =''><a href ='planets'>Solar system</a></li>
         <li class =''><a href ='products'>Services</a></li>
         <li class =''><a href ='dictionary/xitsonga'>A-Z Xitsonga</a></li>
         <li class =''><a href ='dictionary/english'>A-Z English</a></li>

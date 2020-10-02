@@ -4,6 +4,7 @@ disturb
 call
 joke
 Reap
+die
 thank
 Sow
 Accept

@@ -1,0 +1,51 @@
+{
+	"type": "table",
+	"name": "levels",
+	"database": "roundcnz_book_prod1",
+	"data": [{
+			"key": "7",
+			"userKey": "2147483647",
+			"name": "Level 2",
+			"descprition": "Evolving Readers [Grade 1 - Grade 2]",
+			"dateCreated": "2017-10-17 08:54:14",
+			"dateModified": "2017-10-17 08:55:02",
+			"recordStatus": "1"
+		},
+		{
+			"key": "6",
+			"userKey": "9411567",
+			"name": "Level 1",
+			"descprition": "Beginning Readers [Pre-Scholars - Grade R]",
+			"dateCreated": "2017-10-16 19:24:24",
+			"dateModified": "2017-10-16 19:24:24",
+			"recordStatus": "1"
+		},
+		{
+			"key": "5",
+			"userKey": "9411567",
+			"name": "Level R",
+			"descprition": "Pre-Readers [Age 4 - 6]",
+			"dateCreated": "2017-10-16 19:23:54",
+			"dateModified": "2017-10-17 08:52:55",
+			"recordStatus": "1"
+		},
+		{
+			"key": "8",
+			"userKey": "2147483647",
+			"name": "Level 3",
+			"descprition": "Rising Fluent Readers [Grade 2 - Grade 4]",
+			"dateCreated": "2017-10-17 08:56:46",
+			"dateModified": "2017-10-17 08:56:46",
+			"recordStatus": "1"
+		},
+		{
+			"key": "9",
+			"userKey": "2147483647",
+			"name": "Level 4",
+			"descprition": "Fluent Readers [Grade 5 - Grade 7]",
+			"dateCreated": "2017-10-17 08:57:48",
+			"dateModified": "2017-10-17 08:57:48",
+			"recordStatus": "1"
+		}
+	]
+}

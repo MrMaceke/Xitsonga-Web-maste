@@ -110,23 +110,26 @@ class TranslatoXitsongaUtil {
          * Set from and detected language
          */
         $fromLanguage = $detectedLanguage;
-        if ($fromLanguage == "") {
-            $fromLanguage = $data->langauge;
-            $detectedLanguage = $data->langauge;
-        }
 
         /*
          * Removes unwanted characters from text
          */
         $text = SanitizeUtil::removeSpecialCharacters($textString);
-
+        
+        $spellingConfigsFile = file_get_contents("./php/translator_categories/translator_configs_$detectedLanguage" . "_spelling.json");
+        $spellingConfigs = json_decode($spellingConfigsFile);
+        
+        /**
+         * Fix spelling issues
+         */
+        $text = TranslatorUtil::replaceKnown($text, $spellingConfigs->configs);
         /**
          * 3. Look for direct translation
          * 
          * This code looks for a direct translations and defaults to initial phrase when direct translation not found.
          */
         $translation = DictionaryJSONCache::cacheTranslateInternal($dictionaryCache, $text, $text, $detectedLanguage);
-
+        
         /**
          * Return direct translation if found
          */
@@ -290,7 +293,7 @@ class TranslatoXitsongaUtil {
          */
         if ($translation != "-" && $translation != "") {
             if ($log) {
-                $aTranslationDAO->AddTranslation($textString, strtolower($translation), $data->langauge, $build, 3);
+                $aTranslationDAO->AddTranslation($textString, strtolower($translation), $detectedLanguage, $build, 3);
             }
             return $aJsonUtils->successFeedback(trim(strtolower($translation)), OPERATION_SUCCESS);
         }
