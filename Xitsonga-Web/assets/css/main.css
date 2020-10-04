@@ -42,6 +42,23 @@
     src: url(../fonts/Arcon-Regular.otf)
 }
 
+.featured-news {
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    width: 80px;
+    margin: 5px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+
+.featured-large-news {
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    width: 120px;
+    margin: 5px;
+}
+
 .mission{
     margin: 20px;
     font-size: 18px;

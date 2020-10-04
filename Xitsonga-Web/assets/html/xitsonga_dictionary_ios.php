@@ -54,7 +54,7 @@
     </div>
 </div>
 <div>
-    It requires iOS 9.0 or later. Compatible with iPhone, iPad, and iPod touch.
+    It requires iOS 1.3 or later. Compatible with iPhone, iPad, and iPod touch.
 </div>
 <div class="rating_div" style ="margin-bottom: -15px">   
     <div class ='desc_heading'>
@@ -62,6 +62,6 @@
     </div>
 </div>
 <div>
-    We currently support <b>Version 1.3 and upwards</b>. Please contact <a>info@xitsonga.org</a> for any issues.
+    We currently support <b>Version 2.0 and upwards</b>. Please contact <a>info@xitsonga.org</a> for any issues.
 </div>
 <br/>

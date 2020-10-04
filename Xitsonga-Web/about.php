@@ -58,12 +58,12 @@ if (!$aWebbackend->hasAccess($pageName)) {
                         </div>
                     </div>
                     <p>
-                        <a href ='kaya'>Xitsonga.org</a> was founded in 2012 by Mukondleteri Sneidon Dumela</a> with the vision of digitalizing Xitsonga content for people to access freely.
-                        We first went live under <a target ="_tab" href = "http://www.gazankuluonline.co.za">http://www.gazankuluonline.co.za</a> domain which was renamed a few months later. 
+                        <a href ='kaya'>Xitsonga.org</a> was founded in 2012 by Mukondleteri Dumela</a> with the vision of digitalizing Xitsonga content for people to access freely.
+                        We first went live under <b>http://www.gazankuluonline.co.za</b> domain which was renamed a few months later. 
                         We had less than a thousand words at the time but we are able to attract a few thousands of users to the web site within the first two months.
                     </p>
                     <p>
-                        Later in 2012 the web site was changed to <a target ="_tab" href = "http://www.tsongaonline.co.za">http://www.tsongaonline.co.za</a> and the web site was given a fresh look. We also launched an installable Windows Version of the dictionary which was a bold step towards reaching more people.
+                        Later in 2012 the web site was changed to <b>http://www.tsongaonline.co.za</b> and the web site was given a fresh look. We also launched an installable Windows Version of the dictionary which was a bold step towards reaching more people.
                     </p>
                    
                     <p>

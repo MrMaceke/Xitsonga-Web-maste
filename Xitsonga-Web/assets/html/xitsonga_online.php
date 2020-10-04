@@ -22,7 +22,7 @@
     The website was initially launched in March 2012.
 </p>
 <p>
- A free online dictionary with with thousands of Xitsonga words and much morea
+ A free online dictionary with thousands of Xitsonga words and much more.
 </p>
 <p>
     <b>Official link</b>: <a href ="dictionary">Xitsonga Dictionary for Web</a>

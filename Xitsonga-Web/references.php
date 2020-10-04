@@ -56,7 +56,7 @@
                                <a  class="red" target = "_tab" href ="http://madyondza.blogspot.co.za/">Madyondza</a>
                                <p style ="font-size: 14px">
                                    Kurhula Baloyi<br/>
-                                   Madyondza is the first Xitsonga online dictionary. Online Library and Museum of All Things Tsonga (Tswa-Ronga)
+                                   Madyondza is the first Xitsonga online dictionary. Online Library and Museum of All Things Tsonga (Tswa-Ronga).
                                </p>
 
                            </td>

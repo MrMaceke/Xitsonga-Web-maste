@@ -32,7 +32,7 @@ class PageAccessController {
             "status" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "System status &mdash; Xitsonga.org"),
             "chatbot" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Rivoningo, the ChatBot &mdash; a live Xitsonga ChatBox based on Eliza"),
             "api" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Xitsonga Dictionary API &mdash; a simple REST dictionary API"),
-            "team" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Meet the team &mdash; Xitsonga.org"),
+            "team" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Team &mdash; Xitsonga.org"),
             "references" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Sources &mdash; Xitsonga.org"),
             "press" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Press &mdash; Xitsonga.org"),
             "android" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Product Offering &mdash; Xitsonga.org"),

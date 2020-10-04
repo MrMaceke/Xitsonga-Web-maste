@@ -22,7 +22,7 @@
     The app was initially launched in August 2015.
 </p>
 <p>
-    Xitsonga dictionary provides you with thousands of words translated from Xitsonga to English and much more. Our app is designed to help you learn in fun intuitive way and we have gone above and beyond to provide you with accurate content.
+    Xitsonga dictionary provides you with thousands of words translated from Xitsonga to English and much more. Our app is designed to help you learn in fun and intuitive way and we have gone above and beyond to provide you with accurate content.
 </p>
 <p>
     <b>Playstore link</b>: <a target = "_tab" href ="https://play.google.com/store/apps/details?id=com.sneidon.ts.dictionary">Google Playstore</a>
@@ -62,6 +62,6 @@
     </div>
 </div>
 <div>
-    We currently support <b>Version 4.4 and upwards</b>. Please contact <a>info@xitsonga.org</a> for any issues.
+    We currently support <b>Version 5.0 and upwards</b>. Please contact <a>info@xitsonga.org</a> for any issues.
 </div>
 <br/>
