@@ -86,7 +86,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                         <table width ="100%">
                             <tr>
                                 <td>
-                                    <img src ="assets/images/ntshuxeko.jpg" width ="150" class="pull-left featured-large-news" style ='border:1px solid gray'/>
+                                    <img src ="assets/images/Ntshuxi.jpeg" width ="150" class="pull-left featured-large-news" style ='border:1px solid gray'/>
                                     <a>Ntshuxeko Ndhlovu</a> <br/>
                                     <b>Editor In Chief</b>
                                     <p style ="font-size: 14px">

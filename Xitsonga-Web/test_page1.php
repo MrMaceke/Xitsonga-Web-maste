@@ -24,8 +24,8 @@ foreach ($phrases as $key => $phrasePair) {
         continue;
     }
 
-    file_put_contents('tensor/xitsonga_train.txt', trim($xitsonga) . "\n", FILE_APPEND);
-    file_put_contents('tensor/english_train.txt', trim($english) . "\n", FILE_APPEND);  
+    file_put_contents('tensor/xitsonga_train1.txt', trim($xitsonga) . "\n", FILE_APPEND);
+    file_put_contents('tensor/english_train1.txt', trim($english) . "\n", FILE_APPEND);  
 
     $count ++;
 }

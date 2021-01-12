@@ -10,7 +10,7 @@
 </div>
 <div>
     <a target = "_tab" href ="https://chrome.google.com/webstore/detail/xitsonga-translator-in-co/jhaegmdcbapmilnhiljiconffoldpnmk?hl=en-US">
-        <img src ="assets/images/chrome.png" width="150px" style ='border:1px solid gray'/>
+        <img src ="assets/images/chrome.png" width="150px" style ='border:1px solid #E3E3E3; border-radius: 15px'/>
     </a>
 </div>
 <div class="rating_div" style ="margin-bottom: -15px">   

@@ -28,7 +28,7 @@ class TranslatorUtil {
     public static $endPattern = "";
     public static $vowel = array("a", "e", "i", "o", "u");
 
-    public static function translateWordEnglishToXitsonga($detectedLanguage, $textString, $data) {
+    public static function translateWordEnglishToXitsonga($detectedLanguage, $textString, $data, $oneWord = true) {
         $aJsonUtils = new JsonUtils();
         $aTranslationDAO = new TranslationDAO();
 
@@ -62,7 +62,11 @@ class TranslatorUtil {
          * Return direct translation if found
          */
         if ($translation != "-" && $translation != "" && $translation != $text) {
-            $aSearch = TranslatorUtil::firstWord($translation);
+            if($oneWord) {
+                $aSearch = TranslatorUtil::firstWord($translation);
+            } else {
+               $aSearch = TranslatorUtil::allWords($translation);
+            }
 
             //if ($log) {
             $aTranslationDAO->AddTranslation($textString, ucfirst(strtolower($aSearch)), $data->langauge, "Direct Translation", 5);
@@ -747,6 +751,16 @@ class TranslatorUtil {
 
         $aSearch = explode(".", $aSearch);
         return $aSearch[0];
+    }
+    
+    public static function allWords($translation) {
+        $aSearch = $translation;
+        $aSearch = str_replace(",", ",", $aSearch);
+        $aSearch = str_replace("‚", ",", $aSearch);
+        $aSearch = str_replace("‚", ",", $aSearch);
+        $aSearch = str_replace(".", ",", $aSearch);
+
+        return $aSearch;
     }
 
     public static function removePatternSpace($translation) {

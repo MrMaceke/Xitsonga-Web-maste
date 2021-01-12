@@ -14,7 +14,7 @@ if (!in_array(strtolower($sk), $array) AND $item == NULL) {
         <div rel='text' class ='link_group' id ="<?php echo $sk; ?>">
             <a><img src ="assets/images/txt.png"/> Save as TXT  </a>
         </div>
-        <?php if ($aWebbackend->hasAccess("manage")) {
+        <?php if ($aWebbackend->hasAccess("manage") && false) {
             ?>
 
             <div rel='tsv' class ='link_group' id ="<?php echo $sk; ?>">

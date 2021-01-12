@@ -34,13 +34,17 @@ if (!$aWebbackend->hasAccess($pageName)) {
                         require_once 'assets/html/xitsonga_dictionary_android.php';
                     } else if (strtolower($sk) == "xitsonga_dictionary_ios") {
                         require_once 'assets/html/xitsonga_dictionary_ios.php';
-                    } else if (strtolower($sk) == "xitsonga_wordsearch_android") {
+                    }
+                    /*
+                    else if (strtolower($sk) == "xitsonga_wordsearch_android") {
                         require_once 'assets/html/xitsonga_wordsearch_android.php';
                     } else if (strtolower($sk) == "xitsonga_wordsearch_ios") {
                         require_once 'assets/html/xitsonga_wordsearch_ios.php';
                     } else if (strtolower($sk) == "xitsonga_kids_android") {
                         require_once 'assets/html/xitsonga_kids_android.php';
-                    } else if (strtolower($sk) == "xitsonga_whatsapp") {
+                    } 
+                    */
+                    else if (strtolower($sk) == "xitsonga_whatsapp") {
                         require_once 'assets/html/xitsonga_whatsapp.php';
                     } else if (strtolower($sk) == "xitsonga_messenger") {
                         require_once 'assets/html/xitsonga_messenger.php';
@@ -79,10 +83,12 @@ if (!$aWebbackend->hasAccess($pageName)) {
                         <ul class ='dictionary_list2'>
                             <li class =''><a href ='service?sk=Xitsonga_Online'>Dictionary for Web</a></li>
                             <li class =''><a href ='service?sk=Xitsonga_Dictionary_Android'>Dictionary for Android</a></li>
+                           <!--
                             <li class =''><a href ='service?sk=Xitsonga_Dictionary_iOS'>Dictionary for iOS</a></li>
                             <li class =''><a href ='service?sk=Xitsonga_WordSearch_Android'>WordSearch for Android</a></li>
                             <li class =''><a href ='service?sk=Xitsonga_WordSearch_iOS'>WordSearch for iOS</a></li>
                             <li class =''><a href ='service?sk=Xitsonga_Kids_Android'>Kids for Android</a></li>
+                            -->
                             <li class =''><a href ='service?sk=Xitsonga_WhatsApp'>WhatsApp Bot</a></li> 
                             <li class =''><a href ='service?sk=Xitsonga_Messenger'>FB Messenger Bot</a></li> 
                             <li class =''><a href ='service?sk=Xitsonga_SMS'>SMS Bot</a></li> 

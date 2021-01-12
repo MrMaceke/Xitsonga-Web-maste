@@ -98,7 +98,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                     -->
                     <div class ="newBody">
                         <p>
-                            For information about COVID19 visit the official government web site <a href ='https://sacoronavirus.co.za/'>https://sacoronavirus.co.za</a> <a href ="https://twitter.com/search?q=%23StayHome&src=trend_click">#StayHome</a>  <a href ="https://twitter.com/search?q=%23Covid19SA&src=trend_click">#Covid19SA</a>.
+                            For information about COVID 19 visit the official government web site <a href ='https://sacoronavirus.co.za/'>https://sacoronavirus.co.za</a> <a href ="https://twitter.com/search?q=%23StayHome&src=trend_click">#StayHome</a>  <a href ="https://twitter.com/search?q=%23Covid19SA&src=trend_click">#Covid19SA</a>.
                         </p>
                     </div>
                     <?php require_once './assets/html/translator_frame.php'; ?>                

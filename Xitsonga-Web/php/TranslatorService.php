@@ -96,7 +96,11 @@ class TranslatorService {
         /**
          * Translate sentences and stores in array
          */
-        $detectedLanguage = TranslatorService::detectLanguage($text);
+        if($data->language == "xitsonga" || $data->language == "english") {
+            $detectedLanguage = $data->language;
+        } else {
+            $detectedLanguage = TranslatorService::detectLanguage($text);
+        }
         $translatesSentences = array();
 
         $sentences = explode(".", $text);
@@ -106,8 +110,8 @@ class TranslatorService {
                 array_push($translatesSentences, $aResponse);
             }
         } else {
-            $aResponse = TranslatorService::translateSentence($detectedLanguage, $sentence, $data);
-            array_push($translatesSentences, $aResponse);
+           $aResponse = TranslatorService::translateSentence($detectedLanguage, $sentence, $data);           
+           array_push($translatesSentences, $aResponse);
         }
 
         /**
@@ -193,7 +197,7 @@ class TranslatorService {
     }
 
     public static function translateOneWord($text, $data) {
-        $aResponse = TranslatorUtil::translateWordEnglishToXitsonga("english", $text, $data);
+        $aResponse = TranslatorUtil::translateWordEnglishToXitsonga("english", $text, $data, false);
         $aReponseJSON = json_decode($aResponse);
 
         if ($aReponseJSON->status == 999) {

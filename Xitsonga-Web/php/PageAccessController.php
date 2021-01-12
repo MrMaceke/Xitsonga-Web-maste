@@ -35,7 +35,7 @@ class PageAccessController {
             "team" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Team &mdash; Xitsonga.org"),
             "references" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Sources &mdash; Xitsonga.org"),
             "press" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Press &mdash; Xitsonga.org"),
-            "android" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Product Offering &mdash; Xitsonga.org"),
+            "android" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Products &mdash; Xitsonga.org"),
             "services" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Services &mdash; Xitsonga.org"),
             "blackberry" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Blackberry &mdash; Download a free Xitsonga dictionary App"),
             "learn" => $this->returnArrayForPage($this->BASIC_ACCESS, $aUser, "Learn Xitsonga"),

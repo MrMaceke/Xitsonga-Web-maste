@@ -9,7 +9,7 @@
     </div>
 </div>
 <div>
-    <img src ="assets/images/sms.png" width="150px" style ='border:1px solid gray'/>
+    <img src ="assets/images/sms.png" width="150px" style ='border:1px solid #E3E3E3; border-radius: 15px'/>
 </div>
 <div class="rating_div" style ="margin-bottom: -15px">   
     <div class ='desc_heading'>

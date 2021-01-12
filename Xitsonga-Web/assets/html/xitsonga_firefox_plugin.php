@@ -10,7 +10,7 @@
 </div>
 <div>
     <a target = "_tab" href ="https://addons.mozilla.org/en-US/firefox/addon/xitsonga-translator-in-context/?src=api">
-        <img src ="assets/images/firefox.png" width="150px" style ='border:1px solid gray'/>
+        <img src ="assets/images/firefox.png" width="150px" style ='border:1px solid #E3E3E3; border-radius: 15px'/>
     </a>
 </div>
 <div class="rating_div" style ="margin-bottom: -15px">   
