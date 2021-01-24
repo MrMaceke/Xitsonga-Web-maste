@@ -5,7 +5,7 @@ require_once 'webBackend.php';
 $aWebbackend = new WebBackend();
 
 if (!$aWebbackend->hasAccess($pageName)) {
-    
+
 }
 ?>
 <!DOCTYPE html>
@@ -28,12 +28,12 @@ if (!$aWebbackend->hasAccess($pageName)) {
             <br/>
             <div class ="row">
                 <article class="col-md-9 maincontent right app_div marginTablet"  style ="margin-top:5px;margin-right: 5px;margin-left: 0px">
-                    <div class="row">    
+                    <div class="row">
                         <div class="new_heading">
                             <h4><a href ='kaya'>Home</a> > Press</h4>
                         </div>
                     </div>
-                    <div class="rating_div" style ="margin-bottom: -15px">   
+                    <div class="rating_div" style ="margin-bottom: -15px">
                         <div class ='desc_heading'>
                             <h4 id ="vision">Press</h4>
                         </div>
@@ -65,13 +65,13 @@ if (!$aWebbackend->hasAccess($pageName)) {
                             <table width ="100%">
                                 <tr>
                                     <td>
-                                        <img src ="assets/images/metrofm.png" class="pull-left featured-large-news"/>
+                                        <img src ="assets/images/businessinsder.png" class="pull-left featured-large-news"/>
 
-                                        <a target="_tab" href ="https://iono.fm/e/925027">Metro FM: Morning Flavour</a>
+                                        <a target="_tab" href ="https://www.businessinsider.co.za/mobile-app-xitsonga-languages-south-africa-2020-11">Business insider | Tech</a>
                                         <p style ="font-size: 14px">
-                                            Xitsonga Dictionary for Android hitting a 100K downloads on Android.
+                                          This award-winning app translates images into Xitsonga words - here's how it works
                                         </p>
-                                        <span style= "color:gray;font-size:14px">September 14, 2020</span><br/>
+                                        <span style= "color:gray;font-size:14px"> Nov 05, 2020, 11:31 AM</span><br/>
                                     </td>
                                 </tr>
                             </table>
