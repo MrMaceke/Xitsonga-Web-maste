@@ -16,12 +16,13 @@
 
 <div>
     <div class ='new_heading' style ="margin-left: -15px;margin-top:-10px;margin-right: -15px;margin-bottom: 10px">
-        <h4>Popular</h4>    
-    </div>    
-    <?php        
-        //echo $aWebBackend->GetAuditAPICallsList();     
+        <h4>Popular</h4>
+    </div>
+    <?php
+        //echo $aWebBackend->GetAuditAPICallsList();
     ?>
     <ul class ='dictionary_list2'>
+        <li class =''><a href ='translator'>Award</a></li>
         <li class =''><a href ='https://www.xitsonga.org/covid19'>COVID-19 #Xitsonga</a></li>
         <li class =''><a href ='translator'>Translator</a></li>
         <li class =''><a href ='planets'>Solar system</a></li>
@@ -38,7 +39,7 @@
         <li class =''><a href ='people/names'>Names</a></li>
     </ul>
     <div class ='new_heading' style ="margin-left: -15px;margin-top:-10px;margin-right: -15px;margin-bottom: 10px">
-    </div>    
+    </div>
     <p style ="font-size: 14px">Download > <a target = '_tab' href ='https://play.google.com/store/apps/details?id=com.sneidon.ts.dictionary'>Android</a> & <a target = '_tab' href = 'https://itunes.apple.com/app/id1361367210'>iOS</a></p>
 </div>
 <?php
@@ -46,11 +47,11 @@
 ?>
 <div>
     <div class ='new_heading' style ="margin-left: -15px;margin-top:-10px;margin-right: -15px;margin-bottom: 10px">
-        <h4><a>Everything</a> > Flooring</h4>    
-    </div>    
-    <img style = "margin-bottom:10px" src = "assets/images/side.png"/>  
+        <h4><a>Everything</a> > Flooring</h4>
+    </div>
+    <img style = "margin-bottom:10px" src = "assets/images/side.png"/>
     <div class ='new_heading' style ="margin-left: -15px;margin-top:-10px;margin-right: -15px;margin-bottom: 10px">
-    </div>    
+    </div>
     <p style ="font-size: 14px">Get In Touch > <a href ="https://applefloors.co.za/" target="_tab">Visit Applefloor</a></p>
 </div>
 <?php

@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -22,14 +22,16 @@
                      echo "<a href='manage'>MyAdmin</a>";
                 }
             ?>
+            <a href="award.php">Award</a>
             <a href="products/">Products</a>
-            <a href="rest-api/">DevAPI</a>            
+            <a href="rest-api/">DevAPI</a>
             <a href="status/">Status</a>
             <a href="signout/">SignOut</a>
             &nbsp;&nbsp;&nbsp;
             <?php
                 }else{
-            ?> 
+            ?>
+            <a href="assets/html/award.php">Award</a>
             <a href="products/">Products</a>
             <a href="rest-api/">DevAPI</a>
             <a href="status/">Status</a>
@@ -47,10 +49,10 @@
         </div>
         <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="dictionary"></span>Xitsonga Dictionary</a></li> 
+                    <li class="active"><a href="dictionary"></span>Xitsonga Dictionary</a></li>
                     <li class="active"><a href="proverbs">Proverbs & Idioms</a></li>
                     <li class="active"><a href="grammar">Language & Grammar</a></li>
-                    <li class="active"><a href="people">Xitsonga Names</a></li> 
+                    <li class="active"><a href="people">Xitsonga Names</a></li>
                     <li class="active"><a href="translator"></span>Xitsonga Translator</a></li>
                     <!--<li class="active"><a href="chatbot"></span>ChatBot</a></li>-->
                     <!--<li class="active"><a href="learn">Exercises</a></li>-->
@@ -58,9 +60,9 @@
                 </ul>
         </div>
     </div>
-</div> 
-<?php 
-  if(rand(2,2) == 2 && FALSE){ 
+</div>
+<?php
+  if(rand(2,2) == 2 && FALSE){
 ?>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
@@ -82,8 +84,7 @@
      echo "<div style ='width:100%;margin:10px;text-align: center;'><img src ='assets/images/slide3.png' width ='600px' style =''/></div>";
    }
    echo "</a>";
-     * 
+     *
      */
 }
 ?>
-
