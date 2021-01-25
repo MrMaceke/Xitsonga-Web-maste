@@ -5,7 +5,7 @@ require_once 'webBackend.php';
 $aWebbackend = new WebBackend();
 
 if (!$aWebbackend->hasAccess($pageName)) {
-    
+
 }
 ?>
 <!DOCTYPE html>
@@ -94,14 +94,14 @@ if (!$aWebbackend->hasAccess($pageName)) {
                             <a href ='about/'>Xitsonga.org</a> is non profit project aimed at digitizing and teaching people the <a target ="_tab" href ='https://en.wikipedia.org/wiki/Tsonga_language'>Xitsonga language</a>.
                         </p>
                     </div>
-                    
+
                     -->
                     <div class ="newBody">
                         <p>
                             For information about COVID 19 visit the official government web site <a href ='https://sacoronavirus.co.za/'>https://sacoronavirus.co.za</a> <a href ="https://twitter.com/search?q=%23StayHome&src=trend_click">#StayHome</a>  <a href ="https://twitter.com/search?q=%23Covid19SA&src=trend_click">#Covid19SA</a>.
                         </p>
                     </div>
-                    <?php require_once './assets/html/translator_frame.php'; ?>                
+                    <?php require_once './assets/html/translator_frame.php'; ?>
                     <br/>
 
                     <div class="row">
@@ -112,9 +112,10 @@ if (!$aWebbackend->hasAccess($pageName)) {
                     <br/>
                     <div>
                         <ul class ='dictionary_list2'>
+                          <li><a href="products">Xitsonga Dictionary</a> Wins Best Educational Solutions on Mtn App of the Year, More Details on <a href="products/">Award</a></li>
                             <li><a href="service?sk=Xitsonga_Dictionary_Android">Xitsonga Dictionary</a> for Android hits 100K downloads milestone an Google Play. More details on <a href="https://twitter.com/Mukondli/status/1310490232207351808">Twitter</a>.</li>
                             <li><a href="products">Xitsonga Bot Series</a> for WhatsApp, FB Messenger and SMS are live. More details on <a href="products/">products page</a>.</li>
-                        </ul> 
+                        </ul>
                     </div>
                     <br/>
                     <div class="row">
@@ -162,7 +163,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=454713284683866";
                             fjs.parentNode.insertBefore(js, fjs);
                         }(document, 'script', 'facebook-jssdk'));</script>
-                    <div class="fb-like" data-href="https://facebook.com/Xitsonga.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>            
+                    <div class="fb-like" data-href="https://facebook.com/Xitsonga.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
                 </aside>
             </div>
         </div>
