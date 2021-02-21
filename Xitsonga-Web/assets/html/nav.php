@@ -22,7 +22,7 @@
                      echo "<a href='manage'>MyAdmin</a>";
                 }
             ?>
-            <a href="award.php">Award</a>
+            <a href="/award">Award</a>
             <a href="products/">Products</a>
             <a href="rest-api/">DevAPI</a>
             <a href="status/">Status</a>
