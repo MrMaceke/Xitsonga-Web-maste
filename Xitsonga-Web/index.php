@@ -112,7 +112,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                     <br/>
                     <div>
                         <ul class ='dictionary_list2'>
-                          <li><a href="products">Xitsonga Dictionary</a> Wins Best Educational Solutions on Mtn App of the Year, More Details on <a href="products/">Award</a></li>
+                          <li><a href="award">Xitsonga Dictionary</a> wins Best Educational Solution at the MTN App of the Year award, More Details on <a href="award/">Award</a></li>
                             <li><a href="service?sk=Xitsonga_Dictionary_Android">Xitsonga Dictionary</a> for Android hits 100K downloads milestone an Google Play. More details on <a href="https://twitter.com/Mukondli/status/1310490232207351808">Twitter</a>.</li>
                             <li><a href="products">Xitsonga Bot Series</a> for WhatsApp, FB Messenger and SMS are live. More details on <a href="products/">products page</a>.</li>
                         </ul>
@@ -128,15 +128,17 @@ if (!$aWebbackend->hasAccess($pageName)) {
                         <div class="col-md-12 text-center">
                             <img class ="featured-news" src="assets/images/capriconfm.jpg"/>
                             <img class ="featured-news" src="assets/images/mlfm.png" />
-                            <img class ="featured-news" src="assets/images/powerfm.png"/>
+
                             <img class ="featured-news" src="assets/images/twinkl.png"/>
-                            <img class ="featured-news" src="assets/images/metrofm.png"/>
+
                             <img class ="featured-news" src="assets/images/702.png"/>
                             <img class ="featured-news" src="assets/images/sabc2.png"/>
 
                         </div>
                     </div>
                     <br/>
+
+
                     <div class="row">
                         <div class ='new_heading'>
                             <h4>Products/Services</h4>
@@ -147,6 +149,12 @@ if (!$aWebbackend->hasAccess($pageName)) {
                         We have innovative and exciting products on our <a href="/products/">digital products</a> page just for you.
                     </div>
                     <br/><br/>
+                    <div class="row">
+                        <div class ='new_heading'>
+                            <h4>Xitsonga.org win Best App of the year</h4>
+                        </div><br><br>
+                        <p style="text-align:center;">  <a href="award"><img  src="assets/images/App.JPG"   height="150" ></a></p><br><br>
+                    </div>
                 </article>
                 <aside class="col-md-3 sidebar sidebar-right marginRightTablet fillWebsite">
                     <?php
