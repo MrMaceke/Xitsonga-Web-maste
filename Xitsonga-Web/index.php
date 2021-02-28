@@ -112,7 +112,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                     <br/>
                     <div>
                         <ul class ='dictionary_list2'>
-                          <li><a href="award">Xitsonga Dictionary</a> wins Best Educational Solution at the MTN App of the Year award, More Details on <a href="award/">Award</a></li>
+                          <li><a href="award">Xitsonga Dictionary</a> wins Best Educational Solution at the MTN App of the Year award. More Details on <a href="award/">Awards</a></li>
                             <li><a href="service?sk=Xitsonga_Dictionary_Android">Xitsonga Dictionary</a> for Android hits 100K downloads milestone an Google Play. More details on <a href="https://twitter.com/Mukondli/status/1310490232207351808">Twitter</a>.</li>
                             <li><a href="products">Xitsonga Bot Series</a> for WhatsApp, FB Messenger and SMS are live. More details on <a href="products/">products page</a>.</li>
                         </ul>
