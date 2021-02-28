@@ -30,7 +30,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
                 <article class="col-md-9 maincontent right marginTablet" style ="margin-left: 5px;padding: 15px">
                     <div class="row">
                         <div class="new_heading">
-                            <h4><a href ='kaya'>Home</a> > Award</h4>
+                            <h4><a href ='kaya'>Home</a> > Awards</h4>
                         </div>
                     </div>
                     <div class="rating_div" style ="margin-bottom: -15px">
@@ -43,12 +43,9 @@ if (!$aWebbackend->hasAccess($pageName)) {
                     <p style="text-align:center;"><img  src="assets/images/App.JPG"   height="150" ></p><br><br>
                     <p>
 
+The MTN App of the Year Awards is a champion of app development in South Africa; celebrating local talent and out-of-the-box thinkers that drive disruption and change.</p>
 
-Xitsonga dictionary provides you with thousands of words translated from Xitsonga to English and much more. Our app is designed to help you learn in a fun and intuitive way, and we have gone above and beyond to provide you with accurate content.
-                    </p>
-
-                      <a href="https://www.appoftheyear.co.za/portfolio-item/xitsonga-dictionary/">https://www.appoftheyear.co.za/portfolio-item/xitsonga-dictionary/</a>
-                    
+                    <li><a href=""></a>More Details on <a href="https://www.appoftheyear.co.za/portfolio-item/xitsonga-dictionary"/>Mtn App of the year</a></li>
                 </article>
                 <aside class="col-md-3 sidebar sidebar-right marginRightTablet fillWebsite">
                     <?php
