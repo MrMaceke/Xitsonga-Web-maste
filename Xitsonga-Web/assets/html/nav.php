@@ -22,7 +22,7 @@
                      echo "<a href='manage'>MyAdmin</a>";
                 }
             ?>
-            <a href="/award">Award</a>
+            <a href="/award">Awards</a>
             <a href="products/">Products</a>
             <a href="rest-api/">DevAPI</a>
             <a href="status/">Status</a>
@@ -31,7 +31,7 @@
             <?php
                 }else{
             ?>
-            <a href="assets/html/award.php">Award</a>
+            <a href="assets/html/award.php">Awards</a>
             <a href="products/">Products</a>
             <a href="rest-api/">DevAPI</a>
             <a href="status/">Status</a>
