@@ -3,7 +3,7 @@
     require_once 'webBackend.php';
 
     $aWebbackend = new WebBackend();
-        
+
     if(!$aWebbackend->hasAccess($pageName)){
         header('Location: access');
         exit();
@@ -19,23 +19,23 @@
 </head>
 
 <body class="home">
-    
+
     <?php
         require_once './assets/html/nav.php';
     ?>
-   
+
     <div class="container">
     <br/>
-       
+
         <div class="row">
             <!-- Article main content -->
             <article class="col-md-9 maincontent right marginTablet" style ="margin-left: 0px">
-                <div class="row">    
+                <div class="row">
                     <div class="new_heading">
                         <h4><a href ='kaya'>Home</a> > Legal</h4>
                     </div>
                 </div>
-                <div class="rating_div" style ="margin-bottom: -20px">   
+                <div class="rating_div" style ="margin-bottom: -20px">
                     <div class ='desc_heading'>
                         <h4 id ="vision">CC license</h4>
                     </div>
@@ -48,7 +48,7 @@
                         <li><b>NonCommercial</b> — You may not use the material for <a target ="_tab" href ='https://creativecommons.org/licenses/by-nc-nd/2.0/#'>commercial purposes</a> without approval.</li>
                         <li><b>Derivatives</b> — If you  <a target ="_tab" href ='https://creativecommons.org/licenses/by-nc-nd/2.0/#'>remix, transform, or build upon</a> the material, you may distribute the modified material provided you send a formal requested to Xitsonga.org.</li>
                     </ul>
-                    <div class="rating_div" style ="margin-bottom: -20px">   
+                    <div class="rating_div" style ="margin-bottom: -20px">
                     <div class ='desc_heading'>
                         <h4 id ="vision">App Licenses</h4>
                     </div>
@@ -61,19 +61,11 @@
                         <a target="_tab" href ="https://play.google.com/store/apps/details?id=com.sneidon.ts.dictionary">Xitsonga Dictionary Android App</a>
                      </li>
                    <li>
-                        <a target="_tab" href ="https://itunes.apple.com/app/id1361367210">Xitsonga Dictionary iOS App</a> 
+                        <a target="_tab" href ="https://itunes.apple.com/app/id1361367210">Xitsonga Dictionary iOS App</a>
                      </li>
-                   <li>
-                        <a target="_tab" href ="https://play.google.com/store/apps/details?id=com.sneidon.ts.wordsearch">Xitsonga WordSearch Android Game</a>
-                    </li>
-                    <li>
-                        <a target="_tab" href ="https://itunes.apple.com/app/id1406013381">Xitsonga WordSearch iOS Game</a>
-                    </li>
-                    <li>
-                        <a target="_tab" href ="https://play.google.com/store/apps/details?id=com.sneidon.ts.kids">Xitsonga For Kids Android App</a>
-                    </li>
+                   
                     </ul>
-                     <div class="rating_div" style ="margin-bottom: -20px">   
+                     <div class="rating_div" style ="margin-bottom: -20px">
                     <div class ='desc_heading'>
                         <h4 id ="vision">Disclaimer</h4>
                     </div>
@@ -81,7 +73,7 @@
                     <p>
                         We may change this policy from time to time by updating this page.
                         You should check this page from time to time to ensure that you are up to date with the changes.
-                        <br/><br/>This policy is effective from 25 June 2019. 
+                        <br/><br/>This policy is effective from 25 June 2019.
                     </p>
                     <hr>
                     <br/>
@@ -92,7 +84,7 @@
                 ?>
             </aside>
         </div>
-    </div>    
+    </div>
     <?php
         require_once './assets/html/footer.php';
         require_once './assets/html/script_2.php';
