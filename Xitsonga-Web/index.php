@@ -133,6 +133,7 @@ if (!$aWebbackend->hasAccess($pageName)) {
 
                             <img class ="featured-news" src="assets/images/702.png"/>
                             <img class ="featured-news" src="assets/images/sabc2.png"/>
+                            <img class ="featured-news" src="assets/images/businessinsder.png"/>
 
                         </div>
                     </div>
